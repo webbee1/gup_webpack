@@ -5,3 +5,54 @@ block variables
 
 block content
     h1 "Обо Мне"
+
+    .wrapper
+      section.section.hero
+        ul.socials
+          each item in ['vk','gh','in']
+            li.socials__item
+              a(href="" class=`socials__link socials__link_${item}`)
+        a(href="").hamburger
+        a(href="").down-arrow
+        .hero__title
+          img(src="../../", alt="").section-title
+          .user.hero__user-block
+            .user__photo
+            .user__about
+            .user__desc
+
+          
+      section.section.about
+        .about__left
+          svg.triangle_fill_white
+          .title.about__section-title
+            | Обо мне
+          .user-about__picture
+          .user-about__title.subtitle
+            | Кто я
+          .user-about__text
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.   
+ 
+        .about__right
+          svg.triangle_fill_beige
+
+          .about-data
+            .about-data__description.about-user-info
+              .about-user-info__title
+                .subtitle Чем я могу быть полезен
+              .about-user-info__text
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.   
+              .about-data__content
+              ul.skills
+                each skill in ['Frontend', 'Backend', 'Workflow']
+                  li.skills__item
+                    .skill-section
+                      .skill-section__title= skill
+                      ul.skill-section__list
+                        each skillName in ['HTML5', 'CSS3', 'JQuery']
+                          li.skills-section__item
+                            .skill
+                              svg.skill__circle
+                              .skill__name= skillName
+      section.section.map

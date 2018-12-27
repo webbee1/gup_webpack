@@ -1,0 +1,48 @@
+@mixin centered($axis:both) {
+  position: absolute;
+    @if $axis==x {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @if $axis==y {
+      top: 50%;
+      transform: translateY(-50%);
+      }
+    @if $axis==both {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+}
+
+@mixin mediumDesktops {
+  @media screen and (max-width: $mediumDesktop) {
+    @content;
+  }
+}
+@mixin desktops {
+  @media screen and (max-width: $desktop) {
+    @content;
+  }
+}
+@mixin laptops {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+@mixin minWidth {
+  @media screen and (max-width: $iPhone5) {
+    @content;
+  }
+}
